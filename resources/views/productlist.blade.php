@@ -5,75 +5,148 @@
     <title>Menu</title>
 
     <style>
-        body{
-            font-family: sans-serif;
-            background: #f3f4f6;
-        }
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #f3f4f6;
+        margin: 0;
+        padding: 0;
+        direction: rtl;
+    }
 
-        .container{
-            width: 300px;
-            margin: 50px auto;
-        }
+    .container {
+        width: 400px;
+        margin: 50px auto;
+    }
 
-        ul{
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
 
-        .category{
-            background: #fff;
-            padding: 12px;
-            margin-bottom: 8px;
-            border-radius: 8px;
-            cursor: pointer;
-        }
+    .category {
+        background: #fff;
+        padding: 15px 20px;
+        border-radius: 10px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
 
-        .products{
-            display: none;
-            margin-top: 8px;
-            padding-right: 15px;
-        }
+    .category:hover {
+        background: #f0f4f8;
+    }
 
-        .category:hover .products{
-            display: block;
-        }
+    .category-title {
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
 
-        .product{
-            font-size: 14px;
-            padding: 4px 0;
-            color: #555;
-            display: flex;
-            justify-content: space-between;
-        }
-        
-    </style>
+    .products {
+        margin-top: 8px;
+        display: none;
+        padding-right: 10px;
+    }
+
+    .category:hover .products {
+        display: block;
+    }
+
+    .product {
+        padding: 8px 10px;
+        font-size: 15px;
+        border-bottom: 1px dashed #ddd;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .product:last-child {
+        border-bottom: none;
+    }
+
+    .product button, .product a {
+        background: #3b82f6;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 13px;
+        transition: background 0.3s;
+        margin-left: 5px;
+    }
+
+    .product button:hover, .product a:hover {
+        background: #2563eb;
+    }
+
+    form.inline {
+        display: inline;
+    }
+
+    .success-message {
+        background: #d1fae5;
+        border: 1px solid #10b981;
+        padding: 10px 15px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        color: #065f46;
+    }
+     a.back-link {
+        display: inline-block;
+        margin-top: 15px;
+        text-decoration: none;
+        color: #3b82f6;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+
+    a.back-link:hover {
+        color: #2563eb;
+    }
+</style>
+
 </head>
 <body>
 
 <div class="container">
 
+    @if(session('success'))
+        <div class="success-message">
+            {{ session('success') }}
+        </div>
+    @endif
+
     <ul>
-        @foreach($categories as $category)
-            <li class="category">
-                {{ $category->name }}
-
-                <ul class="products">
-                    @forelse($category->products as $product)
-                        <li class="product">{{ $product->name }}                 
+    @foreach($categories as $category)
+        <li class="category">
+            <div class="category-title">{{ $category->name }}</div>
+            <ul class="products">
+                @forelse($category->products as $product)
+                    <li class="product">
+                        {{ $product->name }} - {{ $product->price }} تومان
+                        <div>
                             <a href="/product/{{ $product->id }}/edit">ویرایش</a>
-                        </li>
-
-
-                    @empty
-                        <li class="product">محصولی ندارد</li>
-                    @endforelse
-                </ul>
-            </li>
-        @endforeach
+                            <form action="/product/{{ $product->id }}/delete" method="post" class="inline">
+                                @csrf
+                                <button type="submit" onclick="return confirm('آیا مطمئن هستید؟')">حذف</button>
+                            </form>
+                        </div>
+                    </li>
+                @empty
+                    <li class="product">محصولی ندارد</li>
+                @endforelse
+            </ul>
+        </li>
+    @endforeach
     </ul>
-    <a href="/pcreate"><s>s</s></a>
+    <a href="/pcreate" class="back-link">بازگشت به فرم محصولات</a>
 </div>
+
 
 </body>
 </html>

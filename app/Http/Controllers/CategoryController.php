@@ -63,4 +63,10 @@ class CategoryController extends Controller
             ]);
             return redirect('/products')->with('success','done');
         }
+        /// the final means delete 
+        public function delete (Product $product){
+            $product->delete();
+            return redirect('/products')->with('success','deleted');
+        }
+
 }

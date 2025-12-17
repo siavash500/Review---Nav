@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <title>نمایش کاربران و نظرات</title>
     <style>
+         a.back-link {
+        display: inline-block;
+        margin-top: 15px;
+        text-decoration: none;
+        color: #3b82f6;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+
+    a.back-link:hover {
+        color: #2563eb;
+    }
         body { font-family: sans-serif; background: #f4f6f8; padding: 30px; }
         .user-card { background: #fff; padding: 20px; margin-bottom: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,.1); }
         .user-name { font-weight: bold; font-size: 18px; margin-bottom: 10px; }
@@ -34,6 +46,6 @@
         @endif
     </div>
 @endforeach
-
+<a href="/register" class="back-link">فرم پر کردن نظرات</a>
 </body>
 </html>

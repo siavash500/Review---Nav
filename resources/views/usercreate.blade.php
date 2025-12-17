@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <title>ثبت کاربر و نظر</title>
     <style>
+         a.back-link {
+        display: inline-block;
+        margin-top: 15px;
+        text-decoration: none;
+        color: #3b82f6;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+
+    a.back-link:hover {
+        color: #2563eb;
+    }
         body { font-family: sans-serif; background: #f4f6f8; padding: 30px; }
         form { background: #fff; padding: 20px; border-radius: 10px; max-width: 500px; margin: auto; box-shadow: 0 4px 10px rgba(0,0,0,.1); }
         input, textarea, select { width: 100%; padding: 8px 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc; }
@@ -34,7 +46,8 @@
     </select>
 
     <button type="submit">ثبت</button>
-</form>
 
+</form>
+<a href="/users" class="back-link">لیست نظرات</a>
 </body>
 </html>

@@ -31,7 +31,8 @@ Route::get('/products', [CategoryController::class, 'index']);
 Route::get('/product/{product}/edit',[CategoryController::class,'edit']);
 //save the edit
 Route::post('/product/{product}/update',[CategoryController::class,'update']);
-
+// delte
+Route::post('/product/{product}/delete',[CategoryController::class,'delete']);
 /////
 
 
