@@ -55,12 +55,9 @@
     }
 
     .product {
-        padding: 8px 10px;
-        font-size: 15px;
-        border-bottom: 1px dashed #ddd;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        padding: 0 0;
+        margin: 0 0;
+        border: none;
     }
 
     .product:last-child {
@@ -86,6 +83,7 @@
 
     form.inline {
         display: inline;
+        
     }
 
     .success-message {
@@ -95,6 +93,12 @@
         border-radius: 8px;
         margin-bottom: 15px;
         color: #065f46;
+    }
+    ul{
+        
+        display: flex;
+        justify-content: space-between;
+        transition: 1s;
     }
      a.back-link {
         display: inline-block;
