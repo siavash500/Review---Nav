@@ -1,66 +1,84 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Projects
+1️⃣ Category & Product (CRUD + One-to-One)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Description:
+This project is a simple system to manage categories and products.
+Each product belongs to a category. Using one-to-one or one-to-many relationships, you can easily manage products and categories.
 
-## About Laravel
+Features:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Add categories and products (Insert)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Display list of products with categories (Read)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Edit products and categories (Update)
 
-## Learning Laravel
+Delete products and categories (Delete)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Simple RTL UI for displaying products
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Goal:
+To demonstrate Eloquent Relationships in Laravel and implement a practical CRUD for product management.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+2️⃣ User & Review (User Reviews)
 
-## Laravel Sponsors
+Description:
+This project is a simple system for users and their reviews.
+Each user can submit one or more reviews, which are displayed on the page.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Features:
 
-### Premium Partners
+Submit reviews (Insert)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+Display all reviews (Read)
 
-## Contributing
+(Optional) Delete or edit reviews (Delete / Update)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Simple and practical design for quick review display
 
-## Code of Conduct
+Goal:
+To demonstrate handling user-generated data and simple User ↔ Review relationships in Laravel.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+./////// the persian version
+پروژه‌ها
+1️⃣ پروژه Category & Product (CRUD + One-to-One)
 
-## License
+توضیح:
+این پروژه یک سیستم ساده است برای مدیریت دسته‌بندی‌ها و محصولات.
+هر محصول به یک دسته‌بندی تعلق دارد. با استفاده از رابطه one-to-one یا one-to-many می‌توان محصول و دسته‌بندی را مدیریت کرد.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+ویژگی‌ها:
+
+اضافه کردن دسته‌بندی و محصول (Insert)
+
+نمایش لیست محصولات همراه با دسته‌بندی‌ها (Read)
+
+ویرایش محصولات و دسته‌بندی‌ها (Update)
+
+حذف محصولات و دسته‌بندی‌ها (Delete)
+
+طراحی رابط کاربری ساده و RTL برای نمایش محصولات
+
+هدف:
+آموزش کار با Eloquent Relationships در Laravel و ایجاد یک CRUD عملی و کاربردی برای مدیریت محصولات.
+
+2️⃣ پروژه User & Review (نمایش نظرات کاربران)
+
+توضیح:
+این پروژه یک سیستم ساده است برای کاربران و نظرات آنها.
+هر کاربر می‌تواند یک یا چند نظر ثبت کند و این نظرات در صفحه نمایش داده می‌شوند.
+
+ویژگی‌ها:
+
+ثبت نظر توسط کاربران (Insert)
+
+نمایش تمام نظرات (Read)
+
+(اختیاری) حذف یا ویرایش نظرات (Delete / Update)
+
+طراحی ساده و کاربردی برای مشاهده سریع نظرات
+
+هدف:
+آموزش مدیریت داده‌های کاربری و ارتباطات ساده User ↔ Review در Laravel.
